@@ -12,7 +12,7 @@ const FS: char = '\x1f';
 const RS: char = '\x1e';
 const LOG_FORMAT: &str = "--format=%H%x1f%h%x1f%an%x1f%aI%x1f%s%x1f%b%x1e";
 const BRANCH_FORMAT: &str =
-    "--format=%(HEAD)%1f%(refname:short)%1f%(upstream:short)%1f%(objectname:short)%1f%(contents:subject)%1e";
+    "--format=%(HEAD)%1f%(refname:short)%1f%(upstream:short)%1f%(objectname:short)%1f%(symref)%1f%(contents:subject)%1e";
 
 // ---------------------------------------------------------------- types
 
@@ -273,15 +273,15 @@ pub fn parse_branches(out: &str, remote: bool) -> Result<Vec<Branch>> {
         .map(|r| r.trim_start_matches('\n'))
         .filter(|r| !r.trim().is_empty())
         .filter_map(|rec| {
-            let f: Vec<&str> = rec.splitn(5, FS).collect();
-            if f.len() != 5 {
+            let f: Vec<&str> = rec.splitn(6, FS).collect();
+            if f.len() != 6 {
                 return Some(Err(GitError::Parse(format!(
                     "branch record has {} fields",
                     f.len()
                 ))));
             }
             // `origin/HEAD` is a symbolic ref, not a real branch.
-            if remote && f[1].ends_with("/HEAD") {
+            if !f[4].is_empty() {
                 return None;
             }
             Some(Ok(Branch {
@@ -289,7 +289,7 @@ pub fn parse_branches(out: &str, remote: bool) -> Result<Vec<Branch>> {
                 current: f[0] == "*",
                 upstream: (!f[2].is_empty()).then(|| f[2].to_string()),
                 short: f[3].into(),
-                subject: f[4].trim_end().into(),
+                subject: f[5].trim_end().into(),
                 remote,
             }))
         })
@@ -371,7 +371,7 @@ mod tests {
 
     #[test]
     fn branches_local_with_upstream() {
-        let out = "*\x1fmain\x1forigin/main\x1fabc1234\x1fInit\x1e\n \x1ffeat\x1f\x1fdef5678\x1fWork\x1e\n";
+        let out = "*\x1fmain\x1forigin/main\x1fabc1234\x1f\x1fInit\x1e\n \x1ffeat\x1f\x1fdef5678\x1f\x1fWork\x1e\n";
         let b = parse_branches(out, false).unwrap();
         assert_eq!(b.len(), 2);
         assert!(b[0].current && !b[0].remote);
@@ -382,7 +382,7 @@ mod tests {
 
     #[test]
     fn branches_remote_skips_head_alias_and_empty() {
-        let out = " \x1forigin/HEAD\x1f\x1fabc\x1fx\x1e\n \x1forigin/main\x1f\x1fabc\x1fx\x1e\n";
+        let out = " \x1forigin\x1f\x1fabc\x1frefs/remotes/origin/main\x1fx\x1e\n \x1forigin/main\x1f\x1fabc\x1f\x1fx\x1e\n";
         let b = parse_branches(out, true).unwrap();
         assert_eq!(b.len(), 1);
         assert!(b[0].remote);

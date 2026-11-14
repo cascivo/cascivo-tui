@@ -139,7 +139,7 @@ impl<R: GitRepo> Gitview<R> {
         self.files = self.repo.status()?;
         self.branches = self.repo.branches()?;
         for tab in Tab::ALL {
-            let len = self.rows_len(tab);
+            let len = self.visible(tab).len();
             let sel = &mut self.selected[tab.index()];
             *sel = (*sel).min(len.saturating_sub(1));
         }
