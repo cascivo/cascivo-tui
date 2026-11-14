@@ -59,3 +59,4 @@ Things that got in the way, with the local workaround used in this repo.
 - `TestApp` has no snapshot helper; `tests/ui.rs` has a ~18-line one
   (`UPDATE_SNAPSHOTS=1` to accept). A small `assert_screen(name)` in the crate, or a
   documented `insta` recipe, would save every adopter writing it.
+- `Theme` is not re-exported at the crate root (only `cascivo_tui::theme::Theme`), unlike `Role`.
