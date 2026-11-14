@@ -1,0 +1,24 @@
+ Log   Status   Branches
+ / press / to filter
+ ╭ Branches ──────────────────────────────────────────────────────────────────╮
+ │   Branch             Upstream           Tip     Subject                    │
+ │ * main               origin/main        0000003 tip of main                │
+ │   feature/ui                            0000002 tip of feature/ui          │
+ │   origin/main                           0000003 tip of origin/main         │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ ╰────────────────────────────────────────────────────────────────────────────╯
+ main · terminal                                                            3/3
+/ filter · ? help · r refresh · t theme · q quit · tab focus

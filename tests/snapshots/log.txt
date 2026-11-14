@@ -1,0 +1,24 @@
+ Log   Status   Branches
+ / press / to filter
+ ╭ Commits ───────────────────────────────────╮ ╭ Detail ─────────────────────╮
+ │ Commit  Date       Subject                 │ │ Add parser                  │
+ │ 0000003 2026-01-03 Add parser              │ │                             │
+ │ 0000002 2026-01-02 Add types               │ │ 0000003                     │
+ │ 0000001 2026-01-01 Initial commit          │ │ Ada Lovelace                │
+ │                                            │ │ 2026-01-03T12:00:00+00:00   │
+ │                                            │ │                             │
+ │                                            │ │ Parses porcelain output.    │
+ │                                            │ │                             │
+ │                                            │ │ Includes renames.           │
+ │                                            │ │                             │
+ │                                            │ │ src/lib.rs | 2 +-           │
+ │                                            │ │ 1 file changed, 1           │
+ │                                            │ │ insertion(+), 1 deletion(-) │
+ │                                            │ │                             │
+ │                                            │ │                             │
+ │                                            │ │                             │
+ │                                            │ │                             │
+ │                                            │ │                             │
+ ╰────────────────────────────────────────────╯ ╰─────────────────────────────╯
+ main · terminal                                                            3/3
+/ filter · ? help · r refresh · t theme · q quit · tab focus

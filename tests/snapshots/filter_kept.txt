@@ -1,0 +1,24 @@
+ Log   Status   Branches
+ / src  (esc clears)
+ ╭ Changes ───────────────────────────────────────────────────────────────────╮
+ │ St Path                                                                    │
+ │  M src/main.rs                                                             │
+ │ A  src/new.rs                                                              │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ ╰────────────────────────────────────────────────────────────────────────────╯
+ main · terminal                                                            2/4
+/ filter · ? help · r refresh · t theme · q quit · tab focus

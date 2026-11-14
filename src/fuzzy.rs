@@ -36,7 +36,7 @@ pub fn filter<'a>(query: &str, items: impl IntoIterator<Item = &'a str>) -> Vec<
         .enumerate()
         .filter_map(|(i, s)| score(query, s).map(|sc| (i, sc)))
         .collect();
-    hits.sort_by(|a, b| b.1.cmp(&a.1)); // stable: ties stay in order
+    hits.sort_by_key(|h| std::cmp::Reverse(h.1)); // stable: ties stay in order
     hits.into_iter().map(|(i, _)| i).collect()
 }
 
