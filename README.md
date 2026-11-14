@@ -35,6 +35,18 @@ cycling. It is a showcase: the code is short on purpose so you can copy its stru
 <sub>Screenshot is `tests/snapshots/log.txt`; `cargo test` checks it
 (`UPDATE_SNAPSHOTS=1 cargo test` regenerates it).</sub>
 
+## Screenshots
+
+Rendered from the headless `TestApp` with `FakeGit` data.
+
+| Log | Status | Branches |
+|---|---|---|
+| ![Log](docs/screenshots/log.png) | ![Status](docs/screenshots/status.png) | ![Branches](docs/screenshots/branches.png) |
+| **Filter (`/`)** | **Help (`?`)** | **Refresh toast (`r`)** |
+| ![Filter](docs/screenshots/filter.png) | ![Help](docs/screenshots/help.png) | ![Toast](docs/screenshots/toast.png) |
+| **Theme: light** | **Theme: cyberpunk** | |
+| ![light](docs/screenshots/theme-light.png) | ![cyberpunk](docs/screenshots/theme-cyberpunk.png) | |
+
 ## Keys
 
 | Key | Action |
