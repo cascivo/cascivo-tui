@@ -1,0 +1,24 @@
+ Log   Status   Branches
+ / press / to filter
+ ╭ Commits ───────────────────────────────────╮ ╭ Detail ─────────────────────╮
+ │ Commit  Date       Subject                 │ │ Add parser                  │
+ │ 0000003 2026-01-03 Add parser              │ │                             │
+ │ 0000002 2026-01-02 Add types               │ │ 0000003                     │
+ │ 0000001 2026-01-0╭ Keys ────────────────────────────────╮ce                │
+ │                  │ 1 2 3      switch tab                │T12:00:00+00:00   │
+ │                  │ ← →        previous / next tab       │                  │
+ │                  │ j k ↑ ↓    move selection            │celain output.    │
+ │                  │ /          fuzzy filter the list     │                  │
+ │                  │ enter      keep filter, back to list │enames.           │
+ │                  │ esc        clear filter / close help │                  │
+ │                  │ ?          this help                 │ | 2 +-           │
+ │                  │ r          refresh from git          │nged, 1           │
+ │                  │ t          next theme                │+), 1 deletion(-) │
+ │                  │ q          quit                      │                  │
+ │                  ╰──────────────────────────────────────╯                  │
+ │                                            │ │                             │
+ │                                            │ │                             │
+ │                                            │ │                             │
+ ╰────────────────────────────────────────────╯ ╰─────────────────────────────╯
+ main · terminal                                                            3/3
+/ filter · ? help · r refresh · t theme · q quit · tab focus

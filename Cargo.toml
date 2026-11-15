@@ -1,0 +1,10 @@
+[package]
+name = "gitview"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+description = "Read-only git browser TUI built with cascivo-tui"
+license = "MIT"
+
+[dependencies]
+cascivo-tui = "0.1"

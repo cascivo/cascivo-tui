@@ -1,0 +1,24 @@
+ Log   Status   Branches
+ / press / to filter
+ ╭ Changes ───────────────────────────────────────────────────────────────────╮
+ │ St Path                                                                    │
+ │  M src/main.rs                                                             │
+ │ A  src/new.rs                                                              │
+ │ R  docs/a.md → docs/b.md                                                   │
+ │ ?? notes.txt                                                               │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ │                                                                            │
+ ╰────────────────────────────────────────────────────────────────────────────╯
+ main · terminal                                                            4/4
+/ filter · ? help · r refresh · t theme · q quit · tab focus
